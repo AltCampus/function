@@ -7,6 +7,12 @@
 ```js
 // your code goes here
 ```
+function calDogAge(age) {
+var dogage = age*7;
+console.log("Your doggie is " + dogage +"years old in dog years!");
+}
+alert("Your doggie is " + calDogage() + "  years old in dog years!");
+
 2. 🎖Write a function named calculateSupply that:
   * [ ] takes 2 arguments: age, amount per day.
   * [ ] calculates the amount consumed for rest of the life (based on a constant max age).
@@ -14,7 +20,10 @@
   * [ ] Accept floating point values for amount per day, and round the result to a round number.
 
 ```js
-// your code goes here
+function calculateSupply(age, amountperday) {
+  var max_age = 40;
+  cons
+}
 ```
 3. 🎖Create a function called celsiusToFahrenheit:
   * [ ] Store a celsius temperature into a variable.
@@ -24,7 +33,14 @@
   * [ ] Convert it to celsius and output "NN°F is NN°C."
 
 ```js
-// your code goes here
+function celsiusToFahrenheit(celsius_temperature) {
+  var fahrenheit_temperature =  (celsius_temperature * 9/5) + 32;
+  console.log(fahrenheit_temperature);
+
+}
+function fahrenheit_temperature(fahrenheit_temperature) {
+  var celsius_temperature = (fahrenheit_temperature − 32) * 5/9;
+}
 ```
 4. 🎖The function below returns true if the parameter age is greater than 18. Otherwise it asks for a confirmation and returns its result:
 
@@ -40,12 +56,22 @@ function checkAge(age) {
 ```
   4.1 🎖Convert the above function using ternary operator.
   ```js
-  // your code goes here
+function checkAge(age) {
+  if (age > 18) {
+    return true;
+  } else {
+    // ...
+    return confirm("Did parents allow you?");
+  }
+}
   ```
 
   4.2 🎖Convert the above function using `||` operator.
   ```js
-  // your code goes here
+  function checkAge(age) {
+    ( age > 18 ; return true || age < 18 ; return false );
+  
+}
   ```
 Will the function work differently if else is removed like below?
 
@@ -68,7 +94,33 @@ Is there any difference in the behavior of these two variants? If there is what 
 
 ```js
 // Your code goes here
+function pow(x, n) {
+  if(n < 0) {
+    alert("The number below 1 is not allowed");
+  }
+else if (x < 0) {
+alert("The number below 1 is not allowed");
+}
+  else {
+    alert(x**n);
+  }
+}
+After writing code uncomment to check the answer.
+pow(3, 2); // 9
+pow(3, 3); // 27
+pow(1, 100); // 1
 
+==============================================
+var x = + prompt("Enter a Number");
+var n = + prompt("Enter The Power");
+var i;
+function calc(x , n) {
+  for(i=0; i<=n; i++){
+    x = x*x;
+  }
+  return x;
+}
+alert(calc());
 // After writing code uncomment to check the answer.
 // pow(3, 2); // 9
 // pow(3, 3); // 27
@@ -77,27 +129,80 @@ Is there any difference in the behavior of these two variants? If there is what 
 
 6. 🎖Write a program that asks the user for a number n and gives them the possibility to choose between computing the sum and computing the product of 1,…,n. Return the result accordingly.
 
-```js
 // your code goes here
-```
+
+var total = 1;
+var $num = + prompt("Enter a Number");
+var $com = prompt("Sum'+' or Prouduct'*'");
+if($com == "+"){
+    for(var i=2; i<=$num; i++){
+        total = total+i;
+    }
+}
+else if($com == "*"){
+    for(var i=2; i<=$num; i++){
+        total = total*i;
+    }
+}
+alert(total);
+
 6. 🎖Write a program that asks the user for a number n using prompt and prints the sum of the numbers 1 to n
 
 ```js
-// your code goes here
+var $num = + prompt(Enter a Number);
+var total = 0;
+for(var i=0; i<=$num; i++){
+        total = total+i;
+}
+alert(total)
 ```
-7. 🎖Modify the previous program such that only multiples of 5 or 7 are considered in the sum, e.g. n = 20 (5,7,10,14,15,20) 71
+
+7. 🎖Modify the previous program such that only multiples of 5 or 7 are considered in the sum, e.g. n = 20 (5,7,10,14,15,20)
+
 
 ```js
-// your code goes here
+var $num = + prompt("Enter a Number");
+for(var i=0; i<=$num; i++){
+  if(i%5==0 || i%7==0){
+    console.log(i)
+  }
+}
 ```
+
 
 8. 🎖Write a function `min` that takes two arguments and returns their minimum.
 
 ```js
-// Your code here.
+function min(x, y) {
+  if (x <= y) {
+    console.log(x);
+  }
+  else {
+    console(y);
+  }
 
+}
+console.log(min(0, 10));
+// → 0
+console.log(min(0, -10));
+// → -10
+-------------------------------
 console.log(min(0, 10));
 // → 0
 console.log(min(0, -10));
 // → -10
 ```
+var $input1 = + prompt("Enter First Number");
+var $input2 = + prompt("Enter Secound Number");
+
+function min($input1 , input2) {
+  if ($input1 > $input2) {
+    return $input2 ;
+  }
+
+  else{
+    return $input1 ;
+  }
+}
+
+alert(min());
