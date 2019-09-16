@@ -57,12 +57,7 @@ function checkAge(age) {
   4.1 🎖Convert the above function using ternary operator.
   ```js
 function checkAge(age) {
-  if (age > 18) {
-    return true;
-  } else {
-    // ...
-    return confirm("Did parents allow you?");
-  }
+  ( age > 18 ; return true ? return true : return false );
 }
   ```
 
@@ -94,6 +89,9 @@ Is there any difference in the behavior of these two variants? If there is what 
 
 ```js
 // Your code goes here
+var x = + prompt("Enter a Number");
+var n = + prompt("Enter The Power");
+
 function pow(x, n) {
   if(n < 0) {
     alert("The number below 1 is not allowed");
