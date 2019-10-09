@@ -6,6 +6,12 @@
 
 ```js
 // your code goes here
+function calculateDogAge () {
+  var humanAge = +prompt("Enter your age");
+  var conAge=(humanAge/7);
+  return (`Your doggie is ${conAge} yearsold in dog years!`);
+}
+
 ```
 2. 🎖Write a function named calculateSupply that:
   * [ ] takes 2 arguments: age, amount per day.
@@ -15,6 +21,12 @@
 
 ```js
 // your code goes here
+  function calculateSupply(age,amountPerDay) {
+    var maxAge = 60;
+    var remAge = (60 - age)*365;
+    var foodComsumed = remAge * amountPerDay
+    return (`You will need ${foodComsumed}kg to last you until the ripe old age of ${maxAge}years`)
+  }
 ```
 3. 🎖Create a function called celsiusToFahrenheit:
   * [ ] Store a celsius temperature into a variable.
@@ -25,6 +37,16 @@
 
 ```js
 // your code goes here
+  function celciusToFahrenheit() {
+    var celciusTemperature = +prompt("enter the temp in celcius");
+    var fahrenheit = (celciusTemperature * 1.8) + 32;
+    return (`${celciusTemperature}°C is ${fahrenheit}°F`)
+  }
+  function fahrenheitToCelsius() {
+    var fahrenheitTemperature = +prompt("enter the temp in fahrenheit");
+    var celcius = (fahrenheitTemperature - 32) / 1.8;
+    return (`${fahrenheitTemperature}°F is ${celcius}°C`)
+  }
 ```
 4. 🎖The function below returns true if the parameter age is greater than 18. Otherwise it asks for a confirmation and returns its result:
 
@@ -41,11 +63,18 @@ function checkAge(age) {
   4.1 🎖Convert the above function using ternary operator.
   ```js
   // your code goes here
+
+  age > 18 ? true :  confirm("Did parents allow you?") ;
+
   ```
 
   4.2 🎖Convert the above function using `||` operator.
   ```js
   // your code goes here
+  let age = +prompt("the age is");
+  if age=18 || age >18 {
+    confirm ("Did parents allow you?");
+  }
   ```
 Will the function work differently if else is removed like below?
 
