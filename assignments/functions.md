@@ -152,6 +152,12 @@ pow(x,n);
 
 ```js  
 // your code goes here
+var n = +prompt("enter any number");
+      var sum=0;
+    for(i=1;i<=n;i++){
+    sum+=i;
+    }
+  if alert(`sum= ${sum}`)
   
 ```
 7. 🎖Modify the previous program such that only multiples of 5 or 7 are considered in the sum, e.g. n = 20 (5,7,10,14,15,20) 71
