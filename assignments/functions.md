@@ -164,12 +164,26 @@ var n = +prompt("enter any number");
 
 ```js
 // your code goes here
+var a = prompt("enter any number: ")
+var sum = 0;
+for (var i = 0; i <= a; i++) {
+  if ((i%5 == 0)||(i%7 == 0)) {
+    sum = sum+i
+  }
+}
 ```
 
 8. 🎖Write a function `min` that takes two arguments and returns their minimum.
 
 ```js
 // Your code here.
+function min(a,b) {
+  if(a>b){
+    return b;
+  } else{
+    return a;
+  }
+}
 
 console.log(min(0, 10));
 // → 0
