@@ -72,7 +72,7 @@ function checkAge(age) {
   ```js
   // your code goes here
   let age = +prompt("the age is");
-  if age=18 || age >18 {
+  if (age=18 || age >18) {
     confirm ("Did parents allow you?");
   }
   ```
@@ -83,7 +83,7 @@ function checkAge(age) {
   if (age > 18) {
     return true;
   }
-  // ...
+  // ...no
   return confirm("Did parents allow you?");
 }
 ```
@@ -97,22 +97,62 @@ Is there any difference in the behavior of these two variants? If there is what 
 
 ```js
 // Your code goes here
-
+var x = +prompt("enter any number");
+var n = +prompt("anter any number");
+function pow(x,n){
+  if (n < 1) {
+    alert(`The number below 1 is not allowed`);
+  } else {
+    alert(x**n);
+  }
+}
+pow(x,n);
 // After writing code uncomment to check the answer.
-// pow(3, 2); // 9
-// pow(3, 3); // 27
-// pow(1, 100); // 1
-// pow(-31, 2); // "The number below 1 is not allowed"
+  pow(3, 2);  // 9
+  pow(3, 3); // 27
+  pow(1, 100); // 1
+  pow(-31, 2); // "The number below 1 is not allowed"
 
 6. 🎖Write a program that asks the user for a number n and gives them the possibility to choose between computing the sum and computing the product of 1,…,n. Return the result accordingly.
 
-```js
-// your code goes here
+  // your code goes here
+  var n = +prompt("enter any number");
+  var choice = null
+  while(true){
+  choice = +prompt('enter \n 1. for sum \n 2.for product');
+  if(choice == 1 || choice == 2) {
+    break;
+  }
+  alert('invalid choice')
+  }
+  // if(choice==1){
+  //   var sum=0;
+  //   for(i=1;i<=n;i++){
+  //   sum+=i;
+  //   }
+  //   alert(`sum= ${sum}`)
+  // }else{
+  //   var product=1;
+  //   for(i=1;i<=n;i++){
+  //   product *=i;
+  //   }
+  //   alert(`product= ${product}`);
+  // }
+    var sum=0;
+    var product=1;
+    for(i=1;i<=n;i++){
+    sum+=i;
+    product *=i;
+    }
+  if(choice==1) alert(`sum= ${sum}`)
+  else alert(`product= ${product}`);
+  
 ```
 6. 🎖Write a program that asks the user for a number n using prompt and prints the sum of the numbers 1 to n
 
-```js
+```js  
 // your code goes here
+  
 ```
 7. 🎖Modify the previous program such that only multiples of 5 or 7 are considered in the sum, e.g. n = 20 (5,7,10,14,15,20) 71
 
