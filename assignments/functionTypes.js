@@ -219,11 +219,3 @@ let convertToString1 = function(x) {
  * @param {string} word2
  * @return {string} joined the words joined with a space
  */
-/**
- 
-/**
- * Returns the smallest value of two numbers.
- * @param {number} x
- * @param {number} y
- * @return {number} the smallest number
- */
